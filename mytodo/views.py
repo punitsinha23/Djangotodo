@@ -10,7 +10,7 @@ def home(request):
     form = todoform(request.POST or None)
     tasks = todo.objects.all()
     if request.method == 'POST' and form.is_valid():
-        form.save()  # Save the form directly to the database
+        form.save() 
         redirect('/home')
     return render(request, 'home.html', {'form': form , 'tasks':tasks })
 
@@ -19,6 +19,6 @@ def delete_task(request, task_id):
         task = todo.objects.get(id=task_id)
         task.delete()
     except todo.DoesNotExist:
-        pass  # Handle missing task
+        pass  
 
     return redirect('/home') 

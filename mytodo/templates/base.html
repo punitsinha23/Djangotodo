@@ -49,7 +49,6 @@
     </style>
   </head>
   <body>
-    <!-- Navigation Bar -->
     <nav class="navbar">
       <div class="container-fluid d-flex align-items-center">
         <a class="navbar-brand d-flex align-items-center" href="#">
@@ -61,10 +60,10 @@
       </div>
     </nav>
 
-    <!-- Content Block for Child Templates -->
+   
     <div class="content">
       {% block content %}
-      <!-- Default Content: This can be overridden in child templates -->
+      
       <img src="{% static 'pic.jpeg' %}" alt="To-Do Image">
       <h1>YOUR DAY PLANNER</h1>
       <ul>
@@ -82,7 +81,7 @@
       {% endblock %}
     </div>
 
-    <!-- Bootstrap JS -->
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
