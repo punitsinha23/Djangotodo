@@ -32,7 +32,7 @@
                             <small class="text-muted">Due: {{ task.due_date }}</small>
                         </div>
                         <a href="{% url 'delete_task' task.id %}" class="btn btn-danger btn-sm mt-2">Delete</a>
-                        <button type="button" class="btn btn-success btn-sm mt-2 done-button">Done</button>
+                        <button type="button" class="btn btn-success btn-sm mt-2 margin-left-3 ">Done</button>
                     </li>
                 {% empty %}
                     <li class="list-group-item text-center mt-4">No tasks added yet!</li>
