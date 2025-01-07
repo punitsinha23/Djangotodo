@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-o59d_n-n5i(itrb70)0dk&4q1^6(sh1-%@b0de-ukm3_5$hjld'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
@@ -117,16 +117,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = "/static/"  # URL prefix for static files
 
+# Directories for development static files (optional)
 STATICFILES_DIRS = [
-    BASE_DIR / "staticfiles",  # Global static folder at the project root
+    BASE_DIR / "staticfiles",  # Keep only if you have a custom static folder
 ]
 
-STATIC_URL = "/static/"
+# Directory where Django will collect all static files for production
 STATIC_ROOT = BASE_DIR / "static"
 
-# WhiteNoise configuration
+# WhiteNoise configuration for production
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
